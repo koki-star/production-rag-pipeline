@@ -1,0 +1,47 @@
+# Virtual environments and Python cache
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+secrets/
+.streamlit/secrets.toml
+
+# Local data, indexes, and logs
+data/
+data/chroma/
+data/*.hash
+.chroma/
+chroma/
+chromadb/
+*.log
+*.sqlite
+*.sqlite3
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.ipynb_checkpoints/
+
+# Build and coverage
+dist/
+build/
+coverage/
+.coverage
+htmlcov/
+node_modules/
+
+# uv creates this lock file on each computer
+uv.lock

@@ -1,0 +1,25 @@
+[project]
+name = "production-rag-pipeline"
+version = "0.1.0"
+description = "Two-stage RAG pipeline with query rewriting, reranking, and web fallback"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai",
+    "chromadb",
+    "sentence-transformers",
+    "pydantic",
+    "duckduckgo-search",
+    "tavily-python",
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "pytest",
+    "pytest-asyncio",
+    "streamlit",
+    "ddgs",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
