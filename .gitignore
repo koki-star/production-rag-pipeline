@@ -45,3 +45,7 @@ node_modules/
 
 # uv creates this lock file on each computer
 uv.lock
+
+# Keys
+*.pem
+*.key

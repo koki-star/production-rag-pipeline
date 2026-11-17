@@ -37,7 +37,7 @@ The first run downloads the embedding model and the cross-encoder. That can take
 
 This project installs from `pyproject.toml`. Run `uv sync` on your computer. That command may create a local lock file. The lock file is ignored by git, so Mac and Linux installs do not conflict.
 
-If you want longer written answers, start Ollama on your Mac and pull `llama3.2:3b`. The app still works without Ollama. In that case it builds a short cited answer from the source text.
+If you want longer written answers, start Ollama on your computer and pull `llama3.2:3b`. The app still works without Ollama. In that case it builds a short cited answer from the source text.
 
 ## 3. Configuration and secrets
 
@@ -74,7 +74,7 @@ If I raised the cutoff close to 1.00, a slightly weaker internal match could fal
 
 ## 5. How to run it
 
-From the project folder in the VS Code terminal:
+From the project folder:
 
 ```bash
 uv run streamlit run src/app.py
@@ -88,13 +88,13 @@ Run the tests with:
 uv run pytest -v
 ```
 
-Docker option, for the video demo:
+Docker option:
 
 ```bash
 docker compose up --build
 ```
 
-The first Docker build downloads the models again inside the image, so run it once before you record. Do not also start the local Streamlit command at the same time. Both use port 8501.
+The first Docker build downloads the models again inside the image, so the first run is slow. Do not also start the local Streamlit command at the same time. Both use port 8501.
 
 The assignment lists `duckduckgo-search`. That package was renamed to `ddgs`, and the old package often returns no links. This project uses `ddgs`. It tries DuckDuckGo first. If that search comes back empty, it tries other free search backends so the web fallback can still cite real URLs.
 
